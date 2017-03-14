@@ -2,4 +2,4 @@
 This is a simple, testing repository.
 
 # Purpose
-This repository has the purpose of testing features inside Quay.io system developed by CoreOS. It's currently not connected to any particular project (but that doesn't mean that it won't be in the fugure :-) ).
+This repository has the purpose of testing features inside Quay.io system developed by CoreOS. It's currently not connected to any particular project (but that doesn't mean that it won't be in the future :-) ).

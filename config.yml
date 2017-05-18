@@ -1,0 +1,9 @@
+deployment:
+  production:
+    branch: production
+    commands:
+      - curl -H "Content-Type: application/json" -H "Authorization: Bearer 5a6KKHL2dILIsNaWnM815gBHqDLET7DTXupYrBs3" -X POST -d '{"commit_sha":"$CIRCLE_SHA1","branch":"master"}' https://node01.generalsupport.net/api/v1/repository/ibazulic/circleci-test/trigger/8e1ab43a-cbe1-4118-83f7-8a12ad5e6744/start
+  staging:
+    branch: master
+    commands:
+      - curl -H "Content-Type: application/json" -H "Authorization: Bearer 5a6KKHL2dILIsNaWnM815gBHqDLET7DTXupYrBs3" -X POST -d '{"commit_sha":"$CIRCLE_SHA1","branch":"master"}' https://node01.generalsupport.net/api/v1/repository/ibazulic/circleci-test/trigger/8e1ab43a-cbe1-4118-83f7-8a12ad5e6744/start

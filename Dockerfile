@@ -1,5 +1,6 @@
 FROM docker/whalesay:latest
 MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah
+LABEL version="3.14159"
 ENV ovojeglupost="Ovo je glupost"
 ENV ovojeglupost2="Ovo je nova glupost"
 WORKDIR /tmp

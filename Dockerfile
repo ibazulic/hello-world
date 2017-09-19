@@ -1,4 +1,6 @@
 FROM docker/whalesay:latest
+ENV jasamretard="Ja sam retard"
+RUN echo $jasamretard
 MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah
 LABEL version="3.14159"
 ENV ovojeglupost="Ovo je glupost"

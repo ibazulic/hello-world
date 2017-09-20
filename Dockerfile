@@ -1,5 +1,5 @@
 FROM docker/whalesay:latest
-RUN ovojeglupost
+
 ENV jasamretard="Ja sam retard"
 RUN echo $jasamretard
 MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah

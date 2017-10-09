@@ -1,5 +1,6 @@
 FROM docker/whalesay:latest
 
+ENV "nova_varijabla"="jebiga"
 ENV jasamretard="Ja sam retard veci"
 RUN echo $jasamretard
 MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah

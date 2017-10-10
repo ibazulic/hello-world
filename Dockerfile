@@ -1,7 +1,7 @@
 FROM docker/whalesay:latest
 
 ENV "nova_varijabla"="jebiga"
-ENV jasamretard="Ja sam retard najveci"
+ENV jasamretard="Ja sam retard najveci, jos veci"
 RUN echo $jasamretard
 MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah
 LABEL version="3.14159"

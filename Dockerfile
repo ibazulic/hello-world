@@ -11,5 +11,5 @@ ENV ovojeglupost2="Ovo je nova glupost"
 env ovojeglupost3="Ovo je novija glupost"
 WORKDIR /tmp
 RUN echo $ovojeglupost
-RUN apt-get -y update lol && apt-get install -y fortunes
+RUN apt-get -y update && apt-get install -y fortunes
 CMD /usr/games/fortune -a | cowsay

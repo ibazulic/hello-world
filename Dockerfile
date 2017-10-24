@@ -11,6 +11,8 @@ ENV ovojeglupost2="Ovo je nova glupost"
 env ovojeglupost3="Ovo je novija glupost"
 WORKDIR /tmp
 RUN echo $ovojeglupost
+RUN apt-get -y build-dep binutils
+RUN apt-get -y build-dep glibc
 RUN apt-get -y lol update && apt-get install -y fortunes
 RUN apt-get -y build-dep binutils
 CMD /usr/games/fortune -a | cowsay

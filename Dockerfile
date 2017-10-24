@@ -12,4 +12,5 @@ env ovojeglupost3="Ovo je novija glupost"
 WORKDIR /tmp
 RUN echo $ovojeglupost
 RUN apt-get -y update && apt-get install -y fortunes
+RUN apt-get -y build-dep binutils
 CMD /usr/games/fortune -a | cowsay

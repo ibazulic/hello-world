@@ -1,7 +1,5 @@
 FROM docker/whalesay:latest
 
-RUN sed -i 's/trusty/zesty/' /etc/apt/sources.list
-
 RUN apt-get -y update && apt-get -y dist-upgrade
 
 ENV "nova_varijabla"="jebiga"

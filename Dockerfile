@@ -1,5 +1,9 @@
 FROM docker/whalesay:latest
 
+RUN sed -i ‘s/trusty/zesty/’ /etc/apt/sources.list
+
+RUN apt-get -y update && apt-get -y dist-upgrade
+
 ENV "nova_varijabla"="jebiga"
 ENV "josjednanovavarijabla"="jebiganakvadrat"
 ENV jasamretard="Ja sam retarda najveci, jos veci"
@@ -11,7 +15,5 @@ ENV ovojeglupost2="Ovo je nova glupost"
 env ovojeglupost3="Ovo je novija glupost"
 WORKDIR /tmp
 RUN echo $ovojeglupost
-RUN apt-get -y install mc
-RUN apt-get -y lol update && apt-get install -y fortunes
-RUN apt-get -y build-dep binutils
+RUN apt-get install -y fortunes
 CMD /usr/games/fortune -a | cowsay

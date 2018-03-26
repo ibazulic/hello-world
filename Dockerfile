@@ -1,7 +1,7 @@
 FROM docker/whalesay:latest
 
 RUN apt-get -y update && apt-get -y dist-upgrade
-
+ENV "josnovijavarijabla"="lalalalala"
 ENV "nova_varijabla"="jebiga"
 ENV "josjednanovavarijabla"="jebiganakvadrat"
 ENV jasamretard="Ja sam retarda najveci, jos veci"

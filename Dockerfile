@@ -5,6 +5,8 @@ ENV "josnovijavarijabla"="lalalalala"
 ENV "nova_varijabla"="jebiga"
 ENV "josjednanovavarijabla"="jebiganakvadrat"
 
+ENV "josjednanovavariablatake2"="nesto"
+
 MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah
 LABEL version="3.14159"
 ENV ovojeglupost="Ovo je glupost"

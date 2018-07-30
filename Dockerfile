@@ -15,4 +15,5 @@ env ovojeglupost3="Ovo je novija glupost"
 WORKDIR /tmp
 RUN echo $ovojeglupost
 RUN apt-get install -y fortunes
+RUN echo "jebiga"
 CMD /usr/games/fortune -a | cowsay

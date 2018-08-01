@@ -1,4 +1,4 @@
-FROM docker/whalesay:latest
+FROM docker/whalesay:latest AS first_image
 
 RUN apt-get -y update && apt-get -y dist-upgrade
 ENV "josnovijavarijabla"="lalalalala"

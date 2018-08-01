@@ -16,4 +16,5 @@ WORKDIR /tmp
 RUN echo $ovojeglupost
 RUN apt-get install -y fortunes
 RUN echo "jebiga"
+COPY README.md .
 CMD /usr/games/fortune -a | cowsay

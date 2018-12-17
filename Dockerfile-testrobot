@@ -1,0 +1,6 @@
+FROM centos:latest
+RUN yum -y update && yum -y install kernel-devel python34-pip && pip3 install pymongo
+FROM quay.io/someorg/test-robot:latest as python-source
+COPY --from=python-source /test-pymongo-2.py .
+CMD ["python34", "test-pymongo-2.py"]
+

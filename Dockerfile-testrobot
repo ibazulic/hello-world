@@ -1,7 +1,7 @@
 # add comment to trigger build
 # add another comment
 
-#FROM centos:latest
+FROM centos:latest
 FROM quay.io/someorg/test-robot:latest as python-source
 RUN yum -y update && yum -y install epel-release && yum -y install kernel-devel python34-pip && pip3 install pymongo
 #FROM quay.io/someorg/test-robot:latest as python-source

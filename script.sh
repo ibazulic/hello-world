@@ -1,7 +1,29 @@
-cat >> /etc/docker/daemon.json << EOF
-{
-  "insecure-registries" : ["quay-ceph.ibazulic.me", "debian.tardis.local", "quay-enterprise-route-quay-enterprise.apps.openshift.ibazulic.me:80", "andytest.southcentralus.cloudapp.azure.com"],
-  "debug": true
-}
+mkdir /etc/docker/certs.d/quay-enterprise-route-quay-enterprise.apps.openshift.ibazulic.me
+cat >> ca.crt << EOF
+-----BEGIN CERTIFICATE-----
+MIIEATCCAumgAwIBAgIUObpiOLkwD6WHtku4rtXjJ0jtcXowDQYJKoZIhvcNAQEL
+BQAwgY8xCzAJBgNVBAYTAkRFMQ8wDQYDVQQIDAZCZXJsaW4xDzANBgNVBAcMBkJl
+cmxpbjEVMBMGA1UECgwMUmVkIEhhdCBFTUVBMQwwCgYDVQQLDANDRUUxFTATBgNV
+BAMMDEl2YW4gQmF6dWxpYzEiMCAGCSqGSIb3DQEJARYTaWJhenVsaWNAcmVkaGF0
+LmNvbTAeFw0xOTA2MjEwOTMwNTVaFw0yMjA0MTAwOTMwNTVaMIGPMQswCQYDVQQG
+EwJERTEPMA0GA1UECAwGQmVybGluMQ8wDQYDVQQHDAZCZXJsaW4xFTATBgNVBAoM
+DFJlZCBIYXQgRU1FQTEMMAoGA1UECwwDQ0VFMRUwEwYDVQQDDAxJdmFuIEJhenVs
+aWMxIjAgBgkqhkiG9w0BCQEWE2liYXp1bGljQHJlZGhhdC5jb20wggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDrOJgt4PRkJckIU2f4UM9yjc34iRGpmbFd
+fBaUAonVUGN/bIUdBZx53w2YHQkGuxLsoh5xRwAxOvzIeA9dLLV+tVW8BIsoZadZ
+rWF+uh1IlJjaeKiplX2vX2HbbcaLSVnY7hTZIMmBcJq1QGDeEG3eu7U4Om9SrarX
+WA74Syc4Ey2X0iypUpd71vJlDw//51TRekUGVe1cCOXWZVPYsMJtE1TxI0pYznEN
+JPBQB42fjPyH/hFhpwulRqnGt0gm50siuG/8ZP+9BTWGZY99bomp9wTEFan2dRxG
+0t5IkwSFqwsLZrAKWlg5Krl1V6fclTMydQPS9faLCdngpRozYfShAgMBAAGjUzBR
+MB0GA1UdDgQWBBR3nIl+lm1virsgvxWFyeergFIBcDAfBgNVHSMEGDAWgBR3nIl+
+lm1virsgvxWFyeergFIBcDAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUA
+A4IBAQBsoqNAeM4T6LFuj9MBppdf/XCQ23ze3fPPjRlsSaf+6SxTo63nbpK0lfrl
+D98lBpnsFUOCicfvOHiqmf3Aj+3Q+OBbmDwnJnRHlEPdhO9en8AUtj2xe/WRiOZ3
+5tHWspBo50shMxIoKlobNRjcLloR2WDHRKowGfyg3F5zGDvwROzgWpcYhMdUc8RR
+ODoZ9l6GLkv0GSu0a0Mu5J/lYnM3l7jaq5VWI6ODmlN87useFXwkPZ1poW2Vz+Ll
+x5RPhvjhcAZ++ygr+wG/ACYsG2RWJoXRxKEsjEmMRGjudQgA8ukHysD5AHeLUyZ/
+n/uRyXWLXrgL4eRFsB/pLhqVT0rY
+-----END CERTIFICATE-----
 EOF
-systemctl restart docker
+cp ca.crt /etc/docker/certs.d/quay-enterprise-route-quay-enterprise.apps.openshift.ibazulic.me
+

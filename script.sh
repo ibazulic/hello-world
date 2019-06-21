@@ -1,4 +1,4 @@
-mkdir /etc/docker/certs.d/quay-enterprise-route-quay-enterprise.apps.openshift.ibazulic.me
+mkdir -pv /etc/docker/certs.d/quay-enterprise-route-quay-enterprise.apps.openshift.ibazulic.me
 cat >> ca.crt << EOF
 -----BEGIN CERTIFICATE-----
 MIIEATCCAumgAwIBAgIUObpiOLkwD6WHtku4rtXjJ0jtcXowDQYJKoZIhvcNAQEL

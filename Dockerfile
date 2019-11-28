@@ -4,6 +4,7 @@ FROM docker/whalesay:latest
 # new comment to issue rebuild
 # new comment again to issue rebuild
 # one more comment added
+# another comment
 RUN apt-get -y update && apt-get -y dist-upgrade
 MAINTAINER Ivan Bazulic
 RUN apt-get install -y fortunes

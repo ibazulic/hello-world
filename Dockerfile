@@ -5,6 +5,6 @@ FROM docker/whalesay:latest
 # new comment again to issue rebuild
 RUN apt-get -y update && apt-get -y dist-upgrade
 MAINTAINER Ivan Bazulic
-RUN apt-get install -y fortunes
+RUN apt-get install fortunes
 COPY README.md .
 CMD /usr/games/fortune -a | cowsay

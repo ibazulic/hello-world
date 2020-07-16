@@ -1,5 +1,5 @@
 FROM docker/whalesay:latest
-# added a new comment
+added a new comment
 # added a newer comment to reissue build
 # new comment to issue rebuild
 # new comment again to issue rebuild

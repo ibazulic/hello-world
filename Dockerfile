@@ -1,9 +1,7 @@
 FROM docker/whalesay:latest
-MAINTAINER Ivan Bazulic, Test, Test 2, Novi test hahah
-LABEL version="3.14159"
+MAINTAINER Ivan Bazulic
+LABEL version="3.14.159"
 RUN apt-get -y update && apt-get -y dist-upgrade
-ENV ovojeglupost="Ovo je glupost"
-ENV ovojeglupost2="Ovo je nova glupost"
 WORKDIR /tmp
 RUN echo $ovojeglupost
 RUN apt-get -y update && apt-get install -y fortunes
